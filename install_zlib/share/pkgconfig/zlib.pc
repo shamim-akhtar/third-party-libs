@@ -1,0 +1,13 @@
+prefix=C:/Program Files (x86)/zlib
+exec_prefix=C:/Program Files (x86)/zlib
+libdir=D:\OSG\install_zlib/lib
+sharedlibdir=D:\OSG\install_zlib/lib
+includedir=D:\OSG\install_zlib/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

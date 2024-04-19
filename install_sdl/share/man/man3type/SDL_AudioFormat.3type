@@ -1,0 +1,53 @@
+.\" This manpage content is licensed under Creative Commons
+.\"  Attribution 4.0 International (CC BY 4.0)
+.\"   https://creativecommons.org/licenses/by/4.0/
+.\" This manpage was generated from SDL's wiki page for SDL_AudioFormat:
+.\"   https://wiki.libsdl.org/SDL_AudioFormat
+.\" Generated with SDL/build-scripts/wikiheaders.pl
+.\"  revision SDL-3.1.1-no-vcs
+.\" Please report issues in this manpage's content at:
+.\"   https://github.com/libsdl-org/sdlwiki/issues/new
+.\" Please report issues in the generation of this manpage from the wiki at:
+.\"   https://github.com/libsdl-org/SDL/issues/new?title=Misgenerated%20manpage%20for%20SDL_AudioFormat
+.\" SDL can be found at https://libsdl.org/
+.de URL
+\$2 \(laURL: \$1 \(ra\$3
+..
+.if \n[.g] .mso www.tmac
+.TH SDL_AudioFormat 3type "SDL 3.1.1" "SDL" "SDL3 DATATYPES"
+.SH NAME
+SDL_AudioFormat \- Audio format flags\[char46]
+.SH HEADER FILE
+Defined in SDL_audio\[char46]h, but apps should use #include <SDL3/SDL\[char46]h>
+
+.SH SYNOPSIS
+.nf
+.B #include \(dqSDL3/SDL.h\(dq
+.PP
+.BI "typedef Uint16 SDL_AudioFormat;
+.fi
+.SH DESCRIPTION
+These are what the 16 bits in 
+.BR SDL_AudioFormat
+ currently
+mean\[char46]\[char46]\[char46] (Unspecified bits are always zero)\[char46]
+.BR 
+
+.BR 
+++-----------------------sample is signed if set
+||
+||       ++-----------sample is bigendian if set
+||       ||
+||       ||          ++---sample is float if set
+||       ||          ||
+||       ||          || +=--sample bit size--++
+||       ||          || ||                   ||
+15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00
+
+
+.BR 
+There are macros to query these bits\[char46]
+
+.SH AVAILABILITY
+This datatype is available since SDL 3\[char46]0\[char46]0\[char46]
+
